@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<ui:composition template="/WEB-INF/template/Layout.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+	
+	
+	<f:metadata>
+		<f:viewAction action="#{consultaMovimientosBean.consultar}"></f:viewAction>
+	</f:metadata>
+	<ui:define name="titulo">Consulta Movimientos</ui:define>
+	<ui:define name="cuerpo">
+	<h1>Consulta Movimientos</h1>
+		<h:form id="frm">
+			<h:dataTable value="#{consultaMovimientosBean.movimientos}"
+				var="movimiento">
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="Persona"></h:outputText>
+					</f:facet>
+					<h:outputText value="#{movimiento.persona.nombre}"></h:outputText>
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="Descripcion"></h:outputText>
+					</f:facet>
+					<h:outputText value="#{movimiento.descripcion}"></h:outputText>
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="Tipo"></h:outputText>
+					</f:facet>
+					<h:outputText value="#{movimiento.tipo}"></h:outputText>
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="Valor"></h:outputText>
+					</f:facet>
+					<h:outputText value="#{movimiento.valor}"></h:outputText>
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="Fecha de Vencimiento"></h:outputText>
+					</f:facet>
+					<h:outputText value="#{movimiento.fechaVencimiento}"></h:outputText>
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="Fecha de Pago"></h:outputText>
+					</f:facet>
+					<h:outputText value="#{movimiento.fechaPago}"></h:outputText>
+				</h:column>
+
+
+			</h:dataTable>
+
+		</h:form>
+	</ui:define>
+</ui:composition>

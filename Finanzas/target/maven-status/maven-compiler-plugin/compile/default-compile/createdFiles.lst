@@ -1,0 +1,12 @@
+com\mycompany\finanzas\util\CreaTablas.class
+com\mycompany\finanzas\util\JpaUtil.class
+com\mycompany\finanzas\controller\MiCiudadBean.class
+com\mycompany\finanzas\modelo\Movimiento.class
+com\mycompany\finanzas\servlet\HolaServlet.class
+com\mycompany\finanzas\controller\NombresBean.class
+com\mycompany\finanzas\modelo\TipoMovimiento.class
+com\mycompany\finanzas\controller\ConsultaMovimientosBean.class
+com\mycompany\finanzas\modelo\Persona.class
+com\mycompany\finanzas\controller\HolaBean.class
+com\mycompany\finanzas\controller\ComponentesBean.class
+com\mycompany\finanzas\util\CrearMovimientos.class
